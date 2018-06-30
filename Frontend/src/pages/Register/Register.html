@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Register
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-list-header class="titless">Register</ion-list-header>
+    <ion-item>
+      <ion-label class="lesss" floating>Cedula</ion-label>
+      <ion-input class="lesss" type="text" [(ngModel)]="usua.cedula"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="lesss" floating>Name</ion-label>
+      <ion-input class="lesss" type="text" [(ngModel)]="usua.nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="lesss" floating>Lastname</ion-label>
+      <ion-input class="lesss" type="text" [(ngModel)]="usua.apellido"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="lesss" floating>User</ion-label>
+      <ion-input class="lesss" type="text" [(ngModel)]="usua.usuario"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="lesss" floating>Password</ion-label>
+      <ion-input class="lesss" type="password" [(ngModel)]="usua.contrasena"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="lesss" floating>Repeat password</ion-label>
+      <ion-input class="lesss" type="password" [(ngModel)]="Rpass"></ion-input>
+    </ion-item>
+    <ion-item >
+      <button ion-button clear class="lesss" (click)="Register()">Register</button>
+    </ion-item>
+<!--    <ion-item *ngIf="usua.pass!=''&&Rpass!=''">    
+    <ion-item *ngIf="usua.pass!=Rpass">
+      <ion-label>Incorrect</ion-label>
+    </ion-item>
+    </ion-item>
+    -->
+    {{very}}
+  </ion-list>
+</ion-content>

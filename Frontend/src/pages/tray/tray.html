@@ -1,0 +1,19 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{user}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list (click)="chat(item)" *ngFor="let item of mensajes;">
+    <ion-item>
+      <ion-avatar item-start>
+        <ion-icon name="chatbubbles"></ion-icon>
+      </ion-avatar>
+      <h2>{{ item.Usuario }}</h2>
+      <p>{{item.cuerpo}}</p>      
+    </ion-item>
+  </ion-list>  
+</ion-content>

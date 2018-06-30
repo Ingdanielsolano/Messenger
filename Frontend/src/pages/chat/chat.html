@@ -1,0 +1,43 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{mensajes.destinatario}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list  *ngFor="let item of mensajes;">
+    <ion-grid>        
+      <div *ngIf="item.Usuario==session.sender;else elseblock">
+        <ion-row>
+          <ion-col>
+          </ion-col>
+          <ion-col>            
+              <h5>{{ item.Usuario }}</h5>{{item.Cuerpo}}         
+          </ion-col>
+        </ion-row>
+      </div>
+      <ng-template #elseblock>
+        <ion-row>
+          <ion-col>            
+              <h5>{{ item.Usuario }}</h5>{{item.Cuerpo}}            
+          </ion-col>
+          <ion-col>
+          </ion-col>
+        </ion-row>
+      </ng-template>
+    </ion-grid>
+  </ion-list>
+  <ion-grid>
+    <ion-row>
+        <ion-col col-8>
+            <ion-input type="text" placeholder="Text" [(ngModel)]="mes" ></ion-input>                
+        </ion-col>
+        <ion-col>
+            <button ion-button icon-left (click)="Enviar()"><ion-icon name="send"></ion-icon></button>    
+        </ion-col>
+    </ion-row>
+</ion-grid>
+</ion-content>

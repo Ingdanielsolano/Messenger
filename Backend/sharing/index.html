@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>My app with sockets</title>
+        <meta charset="UTF-8">
+        <script src="http://localhost:8081/socket.io/socket.io.js"></script>        
+        <script src="main.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
+    </head>
+    <body>
+    <h1 id="title">My app</h1>
+    <div id="messages">        
+    </div>
+    <br>
+    <br>
+    <form onsubmit="return addMessage(this)">
+        <input type="text" id="sender" placeholder="Sender">
+        <input type="text" id="addressee" placeholder="Addressee">
+        <input type="text" id="bodytext" placeholder="Tell us something">
+        <input type="submit" value="Send">
+    </form>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+ <ion-header>
+  <ion-navbar>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>    
+  <ion-card *ngFor="let item of persons;" >
+    <ion-card-header>
+      {{ item.Usuario }} 
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        Cedula : {{item.Cedula}}
+      </ion-item>
+      <ion-item>
+        Nombre : {{item.Nombre}}
+      </ion-item>
+      <ion-item>
+        Apellido: {{item.Apellido}}
+      </ion-item>
+    </ion-card-content>
+        
+        
+      
+    
+  </ion-card>
+</ion-content>
