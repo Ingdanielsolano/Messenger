@@ -18,6 +18,9 @@ import { PersonApi } from '../providers/person-api';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from '@angular/http';
+import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
+import { File } from "@ionic-native/file";
+import { Camera } from "@ionic-native/camera";
 
 @NgModule({
   declarations: [
@@ -26,7 +29,7 @@ import { HttpModule } from '@angular/http';
     ContactPage,
     TrayPage,
     ChatPage,
-    LoginPage,    
+    LoginPage,
     RegisterPage,
     MessagePage,
     TabsPage
@@ -41,7 +44,7 @@ import { HttpModule } from '@angular/http';
   entryComponents: [
     MyApp,
     AboutPage,
-    ChatPage,  
+    ChatPage,
     ContactPage,
     TrayPage,
     LoginPage,
@@ -55,7 +58,11 @@ import { HttpModule } from '@angular/http';
     SplashScreen,
     PersonApi,
     AuthService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    FileTransfer,    
+    FileTransferObject,
+    File,
+    Camera,
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }

@@ -15,24 +15,32 @@
       <ion-input class="lesss" type="text" [(ngModel)]="usua.cedula"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label class="lesss" floating>Name</ion-label>
+      <ion-label class="lesss" floating>Nombre</ion-label>
       <ion-input class="lesss" type="text" [(ngModel)]="usua.nombre"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label class="lesss" floating>Lastname</ion-label>
+      <ion-label class="lesss" floating>Apellido</ion-label>
       <ion-input class="lesss" type="text" [(ngModel)]="usua.apellido"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label class="lesss" floating>User</ion-label>
+      <ion-label class="lesss" floating>Usuario</ion-label>
       <ion-input class="lesss" type="text" [(ngModel)]="usua.usuario"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label class="lesss" floating>Password</ion-label>
+      <ion-label class="lesss" floating>Contraseña</ion-label>
       <ion-input class="lesss" type="password" [(ngModel)]="usua.contrasena"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label class="lesss" floating>Repeat password</ion-label>
+      <ion-label class="lesss" floating>Repetir contraseña</ion-label>
       <ion-input class="lesss" type="password" [(ngModel)]="Rpass"></ion-input>
+    </ion-item>
+    <ion-item>
+      <p>{{imageURI}}</p>
+      <button ion-button color="secondary" (click)="getImage()" >Seleccionar</button>
+    </ion-item>
+    <ion-item>
+      <h4>Previsualización</h4>
+      <img src="{{imageFileName}}" *ngIf="imageFileName" alt="Ionic File" width="300" />
     </ion-item>
     <ion-item >
       <button ion-button clear class="lesss" (click)="Register()">Register</button>
