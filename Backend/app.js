@@ -8,6 +8,7 @@ var data;
 var cors = require('cors');
 var routes = require('./routes');
 var expressjwt = require('express-jwt');
+var formidable=require('formidable');
 
 app.use(bodyparser.urlencoded({
     extended: true
@@ -20,7 +21,8 @@ app.use(expressjwt({
     .unless({
         path: [
             '/person/login',
-            '/person/'
+            '/person/',
+            '/upload/'
         ]
     }));
 routes.configure(app);

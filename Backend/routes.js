@@ -12,13 +12,16 @@ function http() {
             dtperson.searchUser(request.params.id,response);            
         })
         app.post('/person/',function (request,response) {               
-            dtperson.insert(request.body,response);
+            dtperson.insert(request,request.body,response);
         })
         app.put('/person/',function(request,response) {
             dtperson.update(request.body,response);
         })
         app.post('/person/login',function (request,response) {         
             dtperson.login(request.body,response);
+        })
+        app.post('/upload/',function(request,response){
+            
         })
     }
 }
