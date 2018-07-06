@@ -20,7 +20,7 @@ function http() {
         app.post('/person/login',function (request,response) {         
             dtperson.login(request.body,response);
         })
-        app.post('/upload/',function(request,response){
+        app.post('/uploadImage/',function(request,response){
             
         })
     }

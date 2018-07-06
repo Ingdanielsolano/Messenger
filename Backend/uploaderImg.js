@@ -2,10 +2,11 @@ var formidable = require('formidable');
 var fs = require('fs');
 
 
-function Run() {
+function Upload() {
     this.saveImage = function (response) {
         var form = new formidable.IncomingForm();
         form.parse(req, function (err, fields, files) {
+            console.log(files);
             var oldpath = files.filetoupload.path;
             var newpath = './' + files.filetoupload.name;
             fs.copyFile(oldpath, newpath, function (err) {
@@ -19,3 +20,4 @@ function Run() {
         });
     }
 }
+module.exports= new Upload();

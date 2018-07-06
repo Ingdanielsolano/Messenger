@@ -77,10 +77,10 @@ export class RegisterPage {
         headers: {}
       }
       console.log("into");
-      fileTransfer.upload(this.imageURI, 'http://localhost:8080/person/uploadImage', options)
+      fileTransfer.upload(this.imageURI, 'http://localhost:8080/uploadImage', options)
         .then((data) => {
           console.log(data + " Uploaded Successfully");
-          this.imageFileName = "http://localhost:8080/images/ionicfile.jpg"
+          this.imageFileName = "http://localhost:8080/ionicfile.jpg"
           loader.dismiss();
           this.presentToast("Image uploaded successfully");
         }, (err) => {
